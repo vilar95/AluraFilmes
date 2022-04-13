@@ -15,17 +15,19 @@ namespace Alura.Filmes.App
             {
                 contexto.LogSQLToConsole();
 
-                //var atores = contexto.Atores
-                //    .OrderByDescending(a => EF.Property<DateTime>(a, "last_update"))
-                //    .Take(10);
+                var atores = contexto.Atores
+                    .OrderByDescending(a => EF.Property<DateTime>(a, "last_update"))
+                    .Take(10);
 
-                //foreach (var ator in atores)
-                //{
-                //    Console.WriteLine(ator + " - " + contexto.Entry(ator).Property("last_update").CurrentValue);
-                //}
+                foreach (var ator in atores)
+                {
+                    Console.WriteLine(ator + " - " + contexto.Entry(ator).Property("last_update").CurrentValue);
+                };
+           
+                
 
-                //Console.WriteLine("Prescione qualquer tecla para continuar. . .");
-                //Console.ReadLine();
+                Console.WriteLine("Prescione qualquer tecla para continuar. . .");
+                Console.ReadLine();
             }
         }
     }
