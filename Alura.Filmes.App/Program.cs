@@ -15,16 +15,10 @@ namespace Alura.Filmes.App
             {
                 contexto.LogSQLToConsole();
 
-                var atores = contexto.Atores
-                    .OrderByDescending(a => EF.Property<DateTime>(a, "last_update"))
-                    .Take(10);
-
-                foreach (var ator in atores)
+                foreach (var idioma in contexto.Idiomas)
                 {
-                    Console.WriteLine(ator + " - " + contexto.Entry(ator).Property("last_update").CurrentValue);
-                };
-           
-                
+                    Console.WriteLine(idioma);
+                }
 
                 Console.WriteLine("Prescione qualquer tecla para continuar. . .");
                 Console.ReadLine();
