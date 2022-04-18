@@ -49,7 +49,7 @@ namespace Alura.Filmes.App.Dados
                .Property<byte>("lenguage_id");
 
             builder
-               .Property<byte>("Original_lenguage_id");
+               .Property<byte?>("original_lenguage_id");
 
             builder
                .HasOne(f => f.IdiomaFalado)
@@ -59,7 +59,12 @@ namespace Alura.Filmes.App.Dados
             builder
                .HasOne(f => f.IdiomaOriginal)
                .WithMany(i => i.FilmesOriginais)
-               .HasForeignKey("Original_lenguage_id");
+               .HasForeignKey("original_lenguage_id");
+
+            builder
+                .Property(f => f.Classificacao)
+                .HasColumnName("rating")
+                .HasColumnType("varchar(10)");
 
         }
     }

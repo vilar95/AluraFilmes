@@ -11,9 +11,10 @@ using System;
 namespace Alura.Filmes.App.Migrations
 {
     [DbContext(typeof(AluraFilmesContexto))]
-    partial class AluraFilmesContextoModelSnapshot : ModelSnapshot
+    [Migration("20220418144912_Inicial")]
+    partial class Inicial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,11 +44,6 @@ namespace Alura.Filmes.App.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasAlternateKey("PrimeiroNome", "UltimoNome");
-
-                    b.HasIndex("UltimoNome")
-                        .HasName("idx_actor_last_name");
-
                     b.ToTable("actor");
                 });
 
@@ -60,10 +56,6 @@ namespace Alura.Filmes.App.Migrations
                     b.Property<string>("AnoLancamento")
                         .HasColumnName("release_year")
                         .HasColumnType("varchar(4)");
-
-                    b.Property<string>("Classificacao")
-                        .HasColumnName("rating")
-                        .HasColumnType("varchar(10)");
 
                     b.Property<string>("Descricao")
                         .HasColumnName("description")

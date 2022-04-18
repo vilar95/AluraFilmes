@@ -11,9 +11,10 @@ using System;
 namespace Alura.Filmes.App.Migrations
 {
     [DbContext(typeof(AluraFilmesContexto))]
-    partial class AluraFilmesContextoModelSnapshot : ModelSnapshot
+    [Migration("20220418174227_UniquePrimeiroUltimoNome")]
+    partial class UniquePrimeiroUltimoNome
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,10 +61,6 @@ namespace Alura.Filmes.App.Migrations
                     b.Property<string>("AnoLancamento")
                         .HasColumnName("release_year")
                         .HasColumnType("varchar(4)");
-
-                    b.Property<string>("Classificacao")
-                        .HasColumnName("rating")
-                        .HasColumnType("varchar(10)");
 
                     b.Property<string>("Descricao")
                         .HasColumnName("description")

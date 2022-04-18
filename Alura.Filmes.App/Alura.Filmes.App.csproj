@@ -154,9 +154,25 @@
     <Compile Include="Dados\FilmeConfiguration.cs" />
     <Compile Include="Dados\IdiomaConfiguration.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
-    <Compile Include="Migrations\20220413190110_Inicial.cs" />
-    <Compile Include="Migrations\20220413190110_Inicial.designer.cs">
-      <DependentUpon>20220413190110_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\20220418144912_Inicial.cs" />
+    <Compile Include="Migrations\20220418144912_Inicial.designer.cs">
+      <DependentUpon>20220418144912_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220418145901_IndiceAtorUltimoNome.cs" />
+    <Compile Include="Migrations\20220418145901_IndiceAtorUltimoNome.designer.cs">
+      <DependentUpon>20220418145901_IndiceAtorUltimoNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220418174227_UniquePrimeiroUltimoNome.cs" />
+    <Compile Include="Migrations\20220418174227_UniquePrimeiroUltimoNome.designer.cs">
+      <DependentUpon>20220418174227_UniquePrimeiroUltimoNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220418175240_Classificacao.cs" />
+    <Compile Include="Migrations\20220418175240_Classificacao.designer.cs">
+      <DependentUpon>20220418175240_Classificacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20220418180613_FilmeCheckConstraint.cs" />
+    <Compile Include="Migrations\20220418180613_FilmeCheckConstraint.designer.cs">
+      <DependentUpon>20220418180613_FilmeCheckConstraint.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AluraFilmesContextoModelSnapshot.cs" />
     <Compile Include="Negocio\Ator.cs" />
