@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Alura.Filmes.App.Negocio
 {
-    internal class Funcionario
+    public class Funcionario : Pessoa
     {
-       
-
+        public string Login { get; set; }
+        public string Senha { get; set; }
     }
 }
