@@ -11,7 +11,7 @@ using System;
 namespace Alura.Filmes.App.Migrations
 {
     [DbContext(typeof(AluraFilmesContexto))]
-    [Migration("20220418175240_Classificacao")]
+    [Migration("20220419135734_Classificacao")]
     partial class Classificacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,16 +62,14 @@ namespace Alura.Filmes.App.Migrations
                         .HasColumnName("release_year")
                         .HasColumnType("varchar(4)");
 
-                    b.Property<string>("Classificacao")
-                        .HasColumnName("rating")
-                        .HasColumnType("varchar(10)");
-
                     b.Property<string>("Descricao")
                         .HasColumnName("description")
                         .HasColumnType("text");
 
                     b.Property<short>("Duracao")
                         .HasColumnName("length");
+
+                    b.Property<string>("TextoClassificacao");
 
                     b.Property<string>("Titulo")
                         .IsRequired()

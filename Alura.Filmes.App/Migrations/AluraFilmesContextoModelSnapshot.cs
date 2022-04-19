@@ -61,16 +61,14 @@ namespace Alura.Filmes.App.Migrations
                         .HasColumnName("release_year")
                         .HasColumnType("varchar(4)");
 
-                    b.Property<string>("Classificacao")
-                        .HasColumnName("rating")
-                        .HasColumnType("varchar(10)");
-
                     b.Property<string>("Descricao")
                         .HasColumnName("description")
                         .HasColumnType("text");
 
                     b.Property<short>("Duracao")
                         .HasColumnName("length");
+
+                    b.Property<string>("TextoClassificacao");
 
                     b.Property<string>("Titulo")
                         .IsRequired()

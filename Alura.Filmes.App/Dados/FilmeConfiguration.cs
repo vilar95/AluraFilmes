@@ -66,6 +66,9 @@ namespace Alura.Filmes.App.Dados
                 .HasColumnName("rating")
                 .HasColumnType("varchar(10)");
 
+            builder
+                .Ignore(f => f.Classificacao);
+
         }
     }
 }
